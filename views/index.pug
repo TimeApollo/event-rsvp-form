@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title= Document
+  body
+    h1= Document
+    h2= "RSVP"
+
+    form(action="/reply", method="POST", enctype="application/x-www-form-urlencoded", id="RSVP")
+      label(for="fullName") Full Name
+      input(type="text", name="name", id="fullName")
+      br
+
+      label(for="email") Email
+      input(type="email", name="email", id="email")
+      br
+
+      input(type="radio", name="attend", id="yes" , value='yes', checked)
+      label(for="yes") I'll be there!
+      br
+      
+      input(type="radio", name="attend" id="no" value="no")
+      label(for="no") I can't make it
+      br
+
+      select( name="numGuests")
+        option(value="0" selected) Select Number of Quests you are bringing if you are coming (this is 0)
+        option(value="1") 1
+        option(value="2") 2
+        option(value="3") 3
+        option(value="4") 4
+        option(value="5") 5
+        option(value="6") 6
+        option(value="7") 7
+        option(value="8") 8
+      br
+
+      div 
+        button(type="submit") Submit RSVP

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title= Document
+  body
+    h1= Document
+
+    h2 Guests Attending
+    each guest in Guests
+      if guest.attending === 'yes'
+        div #{guest.name} with #{guest.guests} guests. Contact at #{guest.email}
+
+    br
+    h2 Guests Not Attending
+    each guest in Guests
+      if guest.attending === 'no'
+        div #{guest.name}. Contact at #{guest.email}
